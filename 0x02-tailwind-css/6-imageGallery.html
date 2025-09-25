@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid and Flexbox Layout</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @media (max-width: 768px) {
+        main {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body class="p-4">
+    <header class="bg-blue-500 text-white p-4">
+      <h1 class="text-3xl">Grid and Flexbox Layout</h1>
+    </header>
+
+    <main class="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-4 min-h-screen">
+      <section class="lg:col-span-2 flex">
+        <div class="p-4 bg-red-200 w-1/2">Flexbox Item 1</div>
+        <div class="p-4 bg-red-400 w-1/2">Flexbox Item 2</div>
+      </section>
+      <aside class="bg-green-200 p-4">Sidebar</aside>
+      <section class="col-span-3 grid grid-col-1 lg:grid-cols-3">
+        <img
+          src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQUUKb_E4DWBUWpOJDP_FSA3ZQOgPWoA8uOPOd3zo6TaU0MCXHarhW05900NPFBAVW0c2okk3jAVcMm6xvem1mSUZeYauVNTXAbl8qX0Q"
+          alt="Dog 1"
+          class="w-full"
+        />
+        <img
+          src="https://media.istockphoto.com/id/513392620/photo/big-dog.jpg?s=612x612&w=0&k=20&c=YgiuJ9_3LGYwHB40IVMnjwv8p-4RCFLwcD-yJAOYAGE="
+          alt="Dog 2"
+          class="w-full"
+        />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1q42LeX_8e083Ty_gydG8ErZxddbssY9s8A&s"
+          alt="Dog 3"
+          class="w-full"
+        />
+      </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white p-4 mt-4">
+      <p>&copy; 2024 John Doe's Blog</p>
+    </footer>
+  </body>
+</html>
